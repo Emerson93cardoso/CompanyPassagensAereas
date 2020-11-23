@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Cadastro de Passagens</title>
+    </head>
+    <body>
+    <h1> Cadastro de Passagens</h1>
+    <form method="post" action="/cadastro-passagens" th:object="${passagensAereas}">
+        <p> País </p>
+        <input type="text" name="pais" th:field="*{pais}"/>
+        <p th:if="${#fields.hasErrors('pais')}" th:errors="*{pais}"></p>
+        <p> Estado </p>
+        <input type="text" name="estado" th:field="*{estado}"/>
+        <p th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}"></p>
+        <p> Cidade </p>
+        <input type="text" name="cidade" th:field="*{cidade}"/>
+        <p th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}"></p>
+        <br> <br>
+        <button type="submit"> CADASTRAR </button>
+    </form>
+    </body>
+</html>

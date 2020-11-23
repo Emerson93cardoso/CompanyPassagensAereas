@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de passagens </title>
+    </head>
+    <body>
+        <h1> Lista de passagens </h1>
+        <table border="2">
+            <tr>
+                <th>ID</th>
+                <th>PAIS</th>
+                <th>ESTADO</th>
+                <th>CIDADE</th>
+            </tr>
+            <tr th:each="passagensAereas: ${listapassagem}">
+                <td th:text="${passagensAereas.id}"/>
+                <td th:text="${passagensAereas.pais}"/>
+                <td th:text="${passagensAereas.estado}"/>
+                <td th:text="${passagensAereas.cidade}"/>
+
+            </tr>
+
+       </table>
+
+
+    </body>
+</html>

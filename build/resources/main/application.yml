@@ -1,0 +1,8 @@
+server:
+  port: 7070
+
+services:
+  passagensAereas:
+    host: http://localhost:6060
+    salvar: ${services.passagensAereas.host}/passagens
+    listar: ${services.passagensAereas.host}/passagens/listar
